@@ -45,14 +45,14 @@ class LoginController extends \mf\control\AbstractController {
             $tab[]= 'success';
             $tab[]= 'Inscription réussie';
             $v = new \application\view\ApplicationView($tab);
-            $v ->render('signUp');
+            $v ->render('home');
         }
         catch(\mf\auth\exception\AuthentificationException $e)
         {
             $tab[]= 'danger';
             $tab[]= $e->getMessage();
             $v = new \application\view\ApplicationView($tab);
-            $v ->render('signUp');
+            $v ->render('home');
         }
 
     }

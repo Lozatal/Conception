@@ -39,9 +39,9 @@ class ApplicationView extends \mf\view\AbstractView{
 	private function renderNav(){
 		return "<nav>
 							<ul>
-								<li><a href='#'>Examen</a></li>
-								<li><a href='#'>Simulateur</a></li>
-								<li><a href='#'>Espace personnel</a></li>
+								<li><a href='" . $this->app_root . "/index.php/examen/'>Examen</a></li>
+								<li><a href='" . $this->app_root . "/index.php/simulation/'>Simulateur</a></li>
+								<li><a href='" . $this->app_root . "/index.php/espace/'>Espace personnel</a></li>
 								<li><a href='" . $this->app_root . "/index.php/login/'>Connexion</a></li>
 							</ul>
 						</nav>";
@@ -65,7 +65,12 @@ class ApplicationView extends \mf\view\AbstractView{
 	*
 	*/
 	private function renderHome(){
-		$chaine="
+		$alert='';
+		if (isset($this->data) and $this->data!=''){
+			$alert = '<div class="alerte-' . $this->data[0] . '">' . $this->data[1] . '</div>';
+		}
+		$chaine=$alert;
+		$chaine.="
 							<section>
 								<img alt='Tir au But' src='images/tiraubut.jpg' />
 							</section>

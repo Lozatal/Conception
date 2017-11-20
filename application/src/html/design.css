@@ -12,8 +12,9 @@ body{
 .body{
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
+	width: 80%;
 	order: 3;
+	margin: auto;
 }
 
 a{
@@ -75,6 +76,7 @@ section{
 	margin: auto;
 	box-sizing: border-box;
 	display: flex;
+	order:2;
 	flex-wrap: wrap;
 }
 
@@ -82,9 +84,33 @@ section img{
 	margin: auto;
 	border-radius: 10px;
 	border: 10px solid black;
+	background-color: black;
+	color: white;
+}
+.alerte-danger{
+	order:1;
+	width:100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 1.5em;
+	background-color:#F08080;
+	color:red;
+	border-radius: 20px;
+	border:1px solid red;
+}
+.alerte-success{
+	order:1;
+	width:100%;
+	text-align: center;
+	padding: 1.5em;
+	background-color:#98FB98;
+	color:green;
+	border:1px solid green;
+	border-radius: 20px;
 }
 
 aside{
+	order:3;
 	background-color: white;
 	width: 50%;
 	margin: auto;
@@ -133,7 +159,7 @@ footer{
 	width: 99%;
 	margin: auto;
 	box-sizing: border-box;
-	order:5;
+	order:4;
 	background-color: black;
 	bottom: 0;
 	position: absolute;
